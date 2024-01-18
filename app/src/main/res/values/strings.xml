@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WheatherApp</string>
+    <string name="todo">TODO</string>
+    <string name="wind">wind</string>
+    <string name="sunny">sunny</string>
+    <string name="sunrise">sunrise</string>
+    <string name="sunset">sunset</string>
+    <string name="sea">sea</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="condition">condition</string>
+    <string name="sunriseVal">Sunrise</string>
+    <string name="sunsetval">Sunset</string>
+    <string name="seaval">Sea</string>
+    <string name="design_by">Design By\nChaitra Revesh</string>
+    <string name="_0_00_c">0.00 c</string>
+    <string name="today">Today</string>
+    <string name="max_0_00_c">Max : 0.00 c</string>
+    <string name="sunday">Sunday</string>
+    <string name="_14th_january_2024">14th January 2024</string>
+    <string name="humidity">Humidity</string>
+    <string name="sunnyval">SUNNY</string>
+    <string name="_0_00">0.00 %</string>
+    <string name="min_0_00_c">Min: 0.00 c</string>
+    <string name="weather_matters_n_we_have_got_the_details">Weather matters,\n we have got the details</string>
+    <string name="design_by_n_chaitra_revesh">Design By,\n Chaitra Revesh</string>
+</resources>

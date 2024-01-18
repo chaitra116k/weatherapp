@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/sunny_background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".MainActivity">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/searchviewicon"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryHint="Search for a city"
+                app:searchIcon="@drawable/search" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cityName"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/sun"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchView"
+                app:drawableLeftCompat="@drawable/loctaion" />
+
+            <TextView
+                android:id="@+id/Today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/today"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.764"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cityName" />
+
+            <TextView
+                android:id="@+id/Temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/_0_00_c"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toTopOf="@+id/minTemp"
+                app:layout_constraintEnd_toEndOf="@+id/Today"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/Today"
+                app:layout_constraintTop_toBottomOf="@id/Today"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SUNNY"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/lottieImg"
+                app:layout_constraintStart_toStartOf="@id/lottieImg"
+                app:layout_constraintTop_toBottomOf="@id/lottieImg"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/max_0_00_c"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weather" />
+
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/min_0_00_c"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/maxTemp" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif-black"
+
+                android:text="@string/sunday"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/minTemp"
+                app:layout_constraintStart_toStartOf="@+id/minTemp"
+                app:layout_constraintTop_toBottomOf="@+id/minTemp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/_14th_january_2024"
+                app:layout_constraintEnd_toEndOf="@+id/day"
+                app:layout_constraintStart_toStartOf="@+id/day"
+                app:layout_constraintTop_toBottomOf="@+id/day" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/cardbackgroundshape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/firstCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="@id/cardContainer"
+                        app:layout_constraintTop_toTopOf="@id/cardContainer">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/humidity"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:id="@+id/humidityy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/_0_00"
+                            tools:ignore="TextContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/humidity"
+                            android:textColor="#5D4037"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp,TextContrastCheck" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/secondCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintLeft_toRightOf="@id/firstCardView"
+                        app:layout_constraintTop_toTopOf="@id/cardContainer">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="6dp"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/wind"
+                            android:contentDescription="@string/wind" />
+
+                        <TextView
+                            android:id="@+id/windSpeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0.00 m/s"
+                            android:textColor="#5D4037"
+                            tools:ignore="HardcodedText,TextContrastCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/wind_speed"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/thirdCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintLeft_toRightOf="@id/secondCardView"
+                        app:layout_constraintTop_toTopOf="@id/cardContainer">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/sunny"
+                            android:contentDescription="@string/sunny" />
+
+                        <TextView
+                            android:id="@+id/sunny"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/sunnyval" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/condition"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp,TextContrastCheck" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forthCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="@id/cardContainer"
+                        app:layout_constraintStart_toStartOf="@id/cardContainer">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/sunrise"
+                            android:contentDescription="@string/sunrise" />
+
+                        <TextView
+                            android:id="@+id/sunrise"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0.00" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/sunriseVal"
+                            android:textColor="#212121"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fifthCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="@id/cardContainer"
+                        app:layout_constraintLeft_toRightOf="@id/forthCardView">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/sunset"
+                            android:contentDescription="@string/sunset" />
+
+                        <TextView
+                            android:id="@+id/sunset"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0:00"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/sunsetval"
+                            android:textColor="#5D4037"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp,TextContrastCheck" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sixthCardView"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_margin="18dp"
+                        android:background="@drawable/cardbackgroundshape"
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="@id/cardContainer"
+                        app:layout_constraintLeft_toRightOf="@id/fifthCardView">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:padding="4dp"
+                            app:srcCompat="@drawable/sea"
+                            android:contentDescription="@string/sea" />
+
+                        <TextView
+                            android:id="@+id/sea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="0000 hPa"
+                            tools:ignore="TextContrastCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/seaval"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp,TextContrastCheck" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:text="@string/design_by"
+                app:layout_constraintTop_toBottomOf="@id/frameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
